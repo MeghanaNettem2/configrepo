@@ -2,7 +2,9 @@ node
 {
    stage('checkout') 
    { 
-      git 'https://github.com/jayanthikr91/Assignment2.git'
+   def url
+   url='https://github.com/jayanthikr91/Assignment2.git'
+      git $(url)
 
    }
    stage('Build')
