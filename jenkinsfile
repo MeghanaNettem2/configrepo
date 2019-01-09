@@ -3,7 +3,7 @@ node
    stage('checkout') 
    { 
    def git_url
-   git_url =load "configrepo/jenkinsfile"
+   git_url =load "propertiesfile"
    git ${url}
 
    }
