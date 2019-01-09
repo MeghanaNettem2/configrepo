@@ -3,7 +3,7 @@ node
    stage('checkout') 
    { 
    def git_url
-   git_url =load "https://github.com/MeghanaNettem2/configrepo/blob/master/propertiesfile"
+   git_url =load 'propertiesfile'
    git ${url}
 
    }
