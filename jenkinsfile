@@ -4,17 +4,11 @@ node
    { 
    
    url =readProperties  file: 'propertiesfile'
+   echo ${url}
    def Var1= url['git_url']
    echo "Var1=${Var1}"
 
    }
-   stage('Build')
-   {
-          sh "mvn clean install" 
-   }
-stage('SonarQube analysis') 
-    { 
-         sh 'mvn sonar:sonar -Dsonar.host.url=http://my40867dns.eastus2.cloudapp.azure.com' 
-     }
+   
  
 }
