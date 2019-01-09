@@ -1,6 +1,6 @@
 node 
 {
-   stage('Preparation') 
+   stage('checkout') 
    { 
       git 'https://github.com/jayanthikr91/Assignment2.git'
 
