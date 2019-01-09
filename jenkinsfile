@@ -3,8 +3,8 @@ node
    stage('checkout') 
    { 
    def git_url
-   git_url =load 'propertiesfile'
-   git ${url}
+   git_url =readProperties  file: 'propertiesfile'
+   git ${git_url}
 
    }
    stage('Build')
