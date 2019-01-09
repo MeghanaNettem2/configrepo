@@ -2,9 +2,9 @@ node
 {
    stage('checkout') 
    { 
-   def url
-   url =load "configrepo/jenkinsfile"
-   git $(url)
+   def git_url
+   git_url =load "configrepo/jenkinsfile"
+   git ${url}
 
    }
    stage('Build')
