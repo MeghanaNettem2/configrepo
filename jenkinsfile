@@ -2,9 +2,10 @@ node
 {
    stage('checkout') 
    { 
-   def git_url
-   git_url =readProperties  file: 'propertiesfile'
-   git ${git_url}
+   
+   url =readProperties  file: 'propertiesfile'
+   def Var1= url['git_url']
+   echo "Var1=${Var1}"
 
    }
    stage('Build')
