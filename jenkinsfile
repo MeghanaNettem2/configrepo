@@ -4,7 +4,7 @@ node
    { 
    def url
    url='https://github.com/jayanthikr91/Assignment2.git'
-      git $(url)
+   git $(url)
 
    }
    stage('Build')
