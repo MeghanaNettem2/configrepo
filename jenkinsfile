@@ -4,7 +4,7 @@ node
    { 
    
    url =readProperties  file: 'propertiesfile'
-   echo ${url}
+   echo "${url}"
    def Var1= url['git_url']
    echo "Var1=${Var1}"
 
