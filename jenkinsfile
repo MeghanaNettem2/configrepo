@@ -7,8 +7,11 @@ node
    echo "${url}"
    def Var1= url['git_url']
    echo "Var1=${Var1}"
-
+   git "${Var1}"
    }
-   
+   stage('Build')
+   {
+          sh "mvn clean install" 
+   }
  
 }
