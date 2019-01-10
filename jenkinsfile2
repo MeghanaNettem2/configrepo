@@ -14,12 +14,7 @@ node
    }
    stage('Build')
    {
-     checkout scm;
-   def url =readProperties  file: 'propertiesfile'
-   echo "${url}"
-   def Var2 = url.APP_BUILD
-   echo "Var2=${Var2}"
-   sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
+     sh "mvn clean install"
    }
  
 }
