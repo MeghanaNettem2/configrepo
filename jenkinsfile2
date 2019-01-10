@@ -10,7 +10,7 @@ node
    def Var1= url.APP_GIT_URL
    echo "Var1=${Var1}"
    git "${Var1}"
-   mvnHome = tool 'Maven'
+   mvnHome = tool 'MAVEN_HOME'
    }
    stage('Build')
    {
