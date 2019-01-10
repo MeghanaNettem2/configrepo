@@ -13,7 +13,7 @@ node
    {
           
           def Var2=url.APP_BUILD
-          sh "$(Var1)"
+          sh "${Var2}"
    }
  
 }
