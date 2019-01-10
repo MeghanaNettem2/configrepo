@@ -1,1 +1,2 @@
 APP_GIT_URL=https://github.com/MeghanaNettem2/devpractice.git
+APP_BUILD=mvn clean install
