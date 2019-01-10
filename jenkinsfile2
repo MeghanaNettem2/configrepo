@@ -12,7 +12,7 @@ node
    }
    stage('Build')
    {
-   
+     checkout scm;
    def url =readProperties  file: 'propertiesfile'
    echo "${url}"
    def Var2 = url.APP_BUILD
