@@ -17,7 +17,7 @@ node
    echo "${url}"
    def Var2 = url.APP_BUILD
    echo "Var2=${Var2}"
-   sh "${Var2}"
+   sh "mvn clean install"
    }
  
 }
