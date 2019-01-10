@@ -1,5 +1,6 @@
 node 
 {
+   def mvnHome
      checkout scm;
    stage('checkout') 
    { 
@@ -9,6 +10,7 @@ node
    def Var1= url.APP_GIT_URL
    echo "Var1=${Var1}"
    git "${Var1}"
+   mvnHome = tool 'Maven'
    }
    stage('Build')
    {
@@ -17,7 +19,7 @@ node
    echo "${url}"
    def Var2 = url.APP_BUILD
    echo "Var2=${Var2}"
-   sh "mvn clean install"
+   sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
  
 }
