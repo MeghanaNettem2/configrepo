@@ -18,5 +18,12 @@ node
    echo "${Var2}"
      sh "${Var2}"
    }
+   stage('SonarQube analysis') 
+    { 
+    def Var3= url.APP_SONAR1
+    def Var4=url.APP_SONAR2
+    echo "${Var3}+{Var4}"
+    sh "${Var3}+{Var4}"
+     }
  
 }
