@@ -24,7 +24,9 @@ node
     def Var4=url.APP_SONAR2
     Sonarurl=Var3+Var4
     echo "${Sonarurl}"
+    withSonarQubeEnv('sonarqube'){
     sh "${Sonarurl}"
+    }
      }
  stage("SonarQube Quality Gate") { 
         
